@@ -1,0 +1,11 @@
+# XAMPP / Apache: serve the Laravel "public" folder when the app is opened at
+# http://localhost/quizsystem  (keeps .env, vendor, storage etc. out of reach)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(\.env|\.git|composer\.(json|lock)|artisan|phpunit\.xml)$ - [F,L,NC]
+    RewriteCond %{REQUEST_URI} !/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

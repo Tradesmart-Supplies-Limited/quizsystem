@@ -1,0 +1,50 @@
+/* TradeSmart Quiz Arena – administration styles */
+@font-face { font-family: 'Montserrat'; font-weight: 400; src: url('../vendor/fonts/montserrat-latin-400-normal.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Montserrat'; font-weight: 600; src: url('../vendor/fonts/montserrat-latin-600-normal.woff2') format('woff2'); font-display: swap; }
+@font-face { font-family: 'Montserrat'; font-weight: 700; src: url('../vendor/fonts/montserrat-latin-700-normal.woff2') format('woff2'); font-display: swap; }
+:root { --ts-blue: #4EAADF; --ts-green: #86C440; --ts-grey: #A7A9AC; --ts-navy: #0d1b2e; --bs-body-font-family: 'Montserrat', system-ui, sans-serif; --bs-body-font-size: .92rem; }
+body { background: #f3f6fa; }
+a { color: #1f78b4; text-decoration: none; }
+.btn-brand { background: linear-gradient(135deg, var(--ts-blue), #2f8cc4); color: #fff; border: 0; font-weight: 600; }
+.btn-brand:hover { color: #fff; filter: brightness(1.08); }
+.admin-shell { display: flex; min-height: 100vh; }
+.admin-sidebar { width: 250px; background: var(--ts-navy); color: #fff; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; flex-shrink: 0; z-index: 1030; }
+.admin-sidebar .brand { display: flex; gap: .6rem; align-items: center; padding: 1.1rem 1rem; color: #fff; border-bottom: 1px solid rgba(255,255,255,.08); }
+.admin-sidebar .brand img { width: 42px; height: 42px; background: #fff; border-radius: 10px; padding: 3px; }
+.admin-sidebar .brand strong { display: block; font-size: 1.05rem; color: var(--ts-green); }
+.admin-sidebar .brand small { display: block; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+.admin-sidebar .nav { padding: .75rem .5rem; flex: 1; overflow: auto; }
+.admin-sidebar .nav-link { color: rgba(255,255,255,.75); border-radius: 8px; padding: .55rem .8rem; display: flex; gap: .6rem; align-items: center; font-weight: 600; }
+.admin-sidebar .nav-link:hover { background: rgba(255,255,255,.07); color: #fff; }
+.admin-sidebar .nav-link.active { background: linear-gradient(90deg, rgba(78,170,223,.35), rgba(134,196,64,.15)); color: #fff; box-shadow: inset 3px 0 0 var(--ts-green); }
+.nav-section { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; opacity: .5; padding: 1rem .8rem .3rem; }
+.sidebar-foot { padding: 1rem; border-top: 1px solid rgba(255,255,255,.08); }
+.admin-main { flex: 1; min-width: 0; }
+.admin-topbar { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: #fff; border-bottom: 1px solid #e5e9f0; position: sticky; top: 0; z-index: 1020; flex-wrap: wrap; }
+.admin-content { padding: 1.5rem; }
+.card { border: 1px solid #e5e9f0; border-radius: 12px; box-shadow: 0 1px 2px rgba(16,24,40,.04); }
+.card-header { background: #fff; border-bottom: 1px solid #eef1f5; border-radius: 12px 12px 0 0 !important; }
+.stat-card .card-body { position: relative; }
+.stat-value { font-size: 1.8rem; font-weight: 700; line-height: 1.1; }
+.stat-label { color: #64748b; font-size: .82rem; }
+.stat-icon { position: absolute; right: 1rem; top: 1rem; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; font-size: 1.2rem; }
+.hero-card { background: linear-gradient(120deg, var(--ts-navy), #17406a 60%, #2b6f3a); color: #fff; }
+.cat-chip { display: inline-flex; gap: .35rem; align-items: center; padding: .15rem .6rem; border-radius: 999px; background: color-mix(in srgb, var(--c) 18%, white); color: color-mix(in srgb, var(--c) 70%, black); font-weight: 600; font-size: .8rem; border: 1px solid color-mix(in srgb, var(--c) 40%, white); }
+.avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; }
+.avatar-lg { width: 56px; height: 56px; } .avatar-xl { width: 80px; height: 80px; font-size: 1.6rem; }
+.avatar-initials { display: inline-grid; place-items: center; background: linear-gradient(135deg, var(--ts-blue), var(--ts-green)); color: #fff; font-weight: 700; }
+.rank-dot { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #e2e8f0; font-weight: 700; font-size: .8rem; }
+.rank-1 { background: #FFD23F; } .rank-2 { background: #cbd5e1; } .rank-3 { background: #e7a96a; }
+.step { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--ts-blue); color: #fff; font-size: .75rem; margin-right: .3rem; }
+.pick-list { max-height: 360px; overflow: auto; }
+.pick-item { display: flex; gap: .5rem; align-items: center; padding: .3rem .25rem; border-bottom: 1px dashed #eef1f5; cursor: pointer; }
+.sticky-save { position: sticky; top: 90px; }
+.sound-list { max-height: 520px; overflow: auto; }
+.login-page { min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 20% 20%, rgba(78,170,223,.25), transparent 40%), radial-gradient(circle at 80% 80%, rgba(134,196,64,.25), transparent 40%), var(--ts-navy); }
+.login-card { width: min(420px, 92vw); background: #fff; border-radius: 18px; padding: 2rem; box-shadow: 0 30px 60px rgba(0,0,0,.35); }
+.login-logo { width: 200px; }
+.letter { letter-spacing: .12em; }
+@media (max-width: 991px) {
+    .admin-sidebar { position: fixed; left: -260px; transition: left .2s; }
+    .admin-sidebar.open { left: 0; }
+}
