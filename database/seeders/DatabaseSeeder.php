@@ -18,9 +18,9 @@ class DatabaseSeeder extends Seeder
         // administrator with:  php artisan quiz:create-admin
         $admin = null;
         if (! app()->isProduction()) {
-            $admin = User::firstOrCreate(['email' => env('SEED_ADMIN_EMAIL', 'admin@tradesmart.local')], [
+            $admin = User::firstOrCreate(['email' => env('SEED_ADMIN_EMAIL', 'victor@tradesmartz.com')], [
                 'name' => 'Quiz Administrator',
-                'password' => env('SEED_ADMIN_PASSWORD', 'QuizArena@2026'),
+                'password' => env('SEED_ADMIN_PASSWORD', 'Quiz@2026'),
                 'role' => User::ROLE_ADMIN,
                 'is_active' => true,
             ]);
