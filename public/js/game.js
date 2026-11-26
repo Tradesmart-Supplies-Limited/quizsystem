@@ -1177,7 +1177,7 @@
             setPhase('idle'); Wheel.startIdle();
         } else { setPhase('idle'); Wheel.startIdle(); }
         if (S.session.current_round > 0 && S.session.status !== 'completed') {
-            $('#introTitle').innerHTML = 'WELCOME BACK,<br><span>OPERATIONS!</span>'; $('#btnStartText').textContent = `RESUME · ROUND ${S.session.current_round} OF ${S.session.total_rounds}`;
+            $('#introTitle').innerHTML = 'WELCOME BACK,<br><span>Dear Team!</span>'; $('#btnStartText').textContent = `RESUME · ROUND ${S.session.current_round} OF ${S.session.total_rounds}`;
         }
         if (S.session.status === 'completed') { $('#introTitle').innerHTML = 'QUIZ<br><span>COMPLETE!</span>'; $('#btnStartText').textContent = 'SEE THE CHAMPION'; }
         if (!reduceMotion()) {
